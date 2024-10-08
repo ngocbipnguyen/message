@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+
+    <EditText
+        android:id="@+id/username_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Username"
+        android:background="@drawable/edit_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passsword_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:background="@drawable/edit_background"
+        app:layout_constraintEnd_toEndOf="@+id/username_edit"
+        app:layout_constraintStart_toStartOf="@+id/username_edit"
+        app:layout_constraintTop_toBottomOf="@+id/username_edit" />
+
+    <ImageView
+        android:id="@+id/facebook_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passsword_edit"
+        app:srcCompat="@drawable/icons_facebook" />
+
+    <ImageView
+        android:id="@+id/apple_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/facebook_icon"
+        app:layout_constraintStart_toEndOf="@+id/facebook_icon"
+        app:layout_constraintTop_toTopOf="@+id/facebook_icon"
+        app:srcCompat="@drawable/icons_apple" />
+
+    <ImageView
+        android:id="@+id/google_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/facebook_icon"
+        app:layout_constraintEnd_toStartOf="@+id/facebook_icon"
+        app:layout_constraintTop_toTopOf="@+id/facebook_icon"
+        app:srcCompat="@drawable/icons_google" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,9 @@ package com.example.message.ui.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.example.message.base.BaseFragment
 import com.example.message.databinding.SplashFragmentBinding
 import com.example.message.ui.viewmodel.SplashViewModel
@@ -22,6 +24,16 @@ class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>() {
     }
 
     override fun initViews() {
+
+        binding.lifecycleOwner = this
+        viewModel.isSigning.observe(viewLifecycleOwner,  Observer<Boolean> { isSigning ->
+            // Update the UI, in this case, a TextView.
+            if (isSigning) {
+//                binding.root.findNavController().navigate(action_splashFragment_to_homeFragment)
+            } else {
+
+            }
+        })
     }
 
     override fun observeVM() {
