@@ -2,6 +2,7 @@ package com.example.message.ui.fragments
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.message.base.BaseFragment
@@ -27,11 +28,11 @@ class LoginFragment : BaseFragment<LoginViewModel, LoginFragmentBinding>() {
             viewModel.sign(Constants.GOOGLE_SIGN, doOnSuccess = {
 
                 val action =
-                    LoginFragmentDirections.actionSpecifyAmountFragmentToConfirmationFragment()
+                    LoginFragmentDirections.actionLoginFragmentToHomeFragment()
 
                 binding.root.findNavController().navigate(action)
             }, doOnFailure = {
-
+                Toast.makeText(requireContext(),"Login is failure", Toast.LENGTH_SHORT).show()
             })
         }
 

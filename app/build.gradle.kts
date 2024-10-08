@@ -6,6 +6,8 @@ plugins {
     id(libs.plugins.kapt.get().pluginId)
     alias(libs.plugins.google.gms.google.services)
 //    alias(libs.plugins.safeargs.kotlin)
+    alias(libs.plugins.androidx.navigation.safeargs)
+
 }
 
 android {
@@ -79,6 +81,7 @@ dependencies {
     // firebase
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
+    implementation(libs.firebase.messaging)
 
 
     //google identity
@@ -89,5 +92,8 @@ dependencies {
     //coroutines
     implementation(libs.lifecycle.viewmodel.ktx)
 
+    // glide
+    implementation(libs.glide)
+    implementation(libs.circleimageview)
 
 }
