@@ -15,6 +15,11 @@ class FirebaseConstants {
         const val pathMessages = "messages";
         const val timestamp = "timestamp";
 
+        const val idFrom = "idFrom";
+        const val idTo = "idTo";
+        const val content = "content";
+        const val type = "type";
+
     }
 
 

@@ -68,6 +68,7 @@ dependencies {
     implementation(libs.converter.moshi)
     implementation(libs.converter.gson)
     implementation(libs.adapter.rxjava2)
+    implementation(libs.logging.interceptor)
 
     //rx
     implementation(libs.rxandroid)
@@ -98,5 +99,6 @@ dependencies {
 
     //serialization
     implementation(libs.kotlinx.serialization.runtime)
+    implementation(libs.library.oauth2.http)
 
 }

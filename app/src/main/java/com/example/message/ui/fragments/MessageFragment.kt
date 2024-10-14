@@ -4,14 +4,17 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.navArgs
+import androidx.lifecycle.lifecycleScope
 import com.example.message.base.BaseFragment
+import com.example.message.constants.Constants
 import com.example.message.databinding.MessageFragmentBinding
 import com.example.message.source.models.Message
 import com.example.message.source.models.User
 import com.example.message.ui.adapter.MessageAdapter
 import com.example.message.ui.viewmodel.MessageViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MessageFragment : BaseFragment<MessageViewModel, MessageFragmentBinding>() {
@@ -53,7 +56,12 @@ class MessageFragment : BaseFragment<MessageViewModel, MessageFragmentBinding>()
 
 
         binding.sendIcon.setOnClickListener {
-
+            val messageText = binding.messageEdit.text.toString().trim()
+            if (messageText.isNotEmpty()) {
+                lifecycleScope.launch(Dispatchers.Default) {
+                    viewModel.sendMessage(messageText,Constants.TYPE_TEXT, user.uid, user.displayName)
+                }
+            }
         }
 
         binding.cameraIcon.setOnClickListener {
