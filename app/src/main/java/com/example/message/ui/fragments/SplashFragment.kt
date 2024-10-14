@@ -29,9 +29,11 @@ class SplashFragment : BaseFragment<SplashViewModel, SplashFragmentBinding>() {
         viewModel.isSigning.observe(viewLifecycleOwner,  Observer<Boolean> { isSigning ->
             // Update the UI, in this case, a TextView.
             if (isSigning) {
-//                binding.root.findNavController().navigate(action_splashFragment_to_homeFragment)
+                val action = SplashFragmentDirections.actionSplashFragmentToHomeFragment()
+                binding.root.findNavController().navigate(action)
             } else {
-
+                val action = SplashFragmentDirections.actionSplashFragmentToLoginFragment()
+                binding.root.findNavController().navigate(action)
             }
         })
     }

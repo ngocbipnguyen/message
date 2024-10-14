@@ -24,10 +24,12 @@ coroutines  = "2.8.6"
 googleGmsGoogleServicesVersion = "4.4.2"
 firebaseFirestore = "25.1.0"
 
-androidx-navigation = "2.7.7"
+androidx-navigation = "2.8.2"
 firebaseMessaging = "24.0.2"
 glide = "4.16.0"
 circleimageview = "3.1.0"
+serialization = "2.0.20"
+kotlinx-serialization-runtime = "1.7.3"
 
 
 [libraries]
@@ -64,6 +66,8 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging", version.ref = "firebaseMessaging" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 circleimageview = { group = "de.hdodenhof", name = "circleimageview", version.ref = "circleimageview" }
+kotlinx-serialization-runtime = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization-runtime" }
+
 
 
 [plugins]
@@ -77,3 +81,6 @@ google-gms-google-services = { id = "com.google.gms.google-services", version.re
 
 #safeargs-kotlin = { id = "androidx.navigation.safeargs.kotlin"}
 androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "androidx-navigation" }
+
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "serialization" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }

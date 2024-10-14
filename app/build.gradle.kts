@@ -96,4 +96,7 @@ dependencies {
     implementation(libs.glide)
     implementation(libs.circleimageview)
 
+    //serialization
+    implementation(libs.kotlinx.serialization.runtime)
+
 }

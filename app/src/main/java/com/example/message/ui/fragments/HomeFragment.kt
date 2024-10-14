@@ -33,8 +33,8 @@ class HomeFragment : BaseFragment<HomeViewModel, HomeFragmentBinding>() {
         binding.lifecycleOwner = this
         listUsers = ArrayList()
         adapter = UserAdapter(requireActivity(),listUsers, onClickUser = { it ->
-//            val action = HomeFra
-//            binding.root.findNavController().navigate()
+            val action = HomeFragmentDirections.actionHomeFragmentToMessageFragment(it)
+            binding.root.findNavController().navigate(action)
         })
 
         binding.userRecycle.adapter = adapter

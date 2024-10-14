@@ -11,6 +11,10 @@ class FirebaseConstants {
         const val photoUrl = "photoUrl"
         const val pushToken = "pushToken"
 
+
+        const val pathMessages = "messages";
+        const val timestamp = "timestamp";
+
     }
 
 

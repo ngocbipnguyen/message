@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="start">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_image"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/message"
+        />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginStart="6dp"
+        android:foregroundGravity="right"
+        >
+
+        <TextView
+            android:id="@+id/text_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/message_background"
+            android:maxWidth="280dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            >
+            <!--image-->
+            <ImageView
+                android:id="@+id/photo_left"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="280dp"
+                android:src="@drawable/message"
+                android:visibility="gone" />
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</LinearLayout>
